@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Temperature</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="panel" aria-label="Current temperature and Fahrenheit Celsius scale">
+      <header class="hero">
+        <div class="topline">
+          <div>
+            <div class="eyebrow">Current temperature</div>
+            <div class="location" id="locationLabel">Finding your location…</div>
+          </div>
+
+          <div class="switcher" role="group" aria-label="Choose preferred temperature unit">
+            <button type="button" id="chooseF" aria-pressed="true">°F</button>
+            <button type="button" id="chooseC" aria-pressed="false">°C</button>
+          </div>
+        </div>
+
+        <div class="reading" aria-live="polite">
+          <div class="primary" id="primaryTemp">--°F</div>
+          <div class="secondary" id="secondaryTemp">--°C</div>
+        </div>
+
+        <div class="status" id="statusText">Requesting location permission…</div>
+      </header>
+
+      <section class="scale-wrap">
+        <div class="units">
+          <span id="leftUnit">Fahrenheit</span>
+          <span></span>
+          <span id="rightUnit">Celsius</span>
+        </div>
+
+        <div class="scale" id="scaleRows">
+          <div class="marker hidden" id="currentMarker">
+            <div class="marker-line"></div>
+            <div class="marker-dot"></div>
+            <div class="marker-label" id="markerLabel">NOW</div>
+          </div>
+        </div>
+
+        <div class="note" id="scaleNote">130°F → −40°F · 10° Fahrenheit increments</div>
+      </section>
+
+      <footer class="footer">
+        Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open‑Meteo</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
