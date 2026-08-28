@@ -23,7 +23,7 @@ A tiny static weather site for GitHub Pages.
 
 The site should then appear at:
 
-`https://simonallaway.github.io/dualtemperature-web/`
+`https://[github-username].github.io/dualtemperature-web/`
 
 ## iPhone
 
